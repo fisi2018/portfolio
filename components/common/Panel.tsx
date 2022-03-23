@@ -6,7 +6,7 @@ export default function Panel(){
     const {nav}=useNav();
     const {pathname}=useRouter();
     return(
-        <aside className="absolute w-1/2 top-full z-30 bg-red-100 " >
+        
           <div className={`text-gray-500 z-30 right-0 flex top-0 bottom-0 flex-col fixed w-full xl:w-1/2 transition-all duration-300 ${nav.active?"translate-x-0  ":"translate-x-full"}  bg-gray-800`} >
             <ul className="flex flex-col text-3xl" >
                 <li className="flex" >
@@ -20,8 +20,8 @@ export default function Panel(){
                     </Link>
                 </li>
                 <li className="flex" >
-                    <Link href="/" >
-                    <a className="p-6 uppercase transition-all duration-300 hover:text-gray-300  " >Proyectos</a>
+                    <Link href="/proyectos" >
+                    <a className={`p-6 uppercase transition-all duration-300 ${pathname.split("/").pop()==="proyectos"?"text-white":"hover:text-gray-300"}`} >Proyectos</a>
                     </Link>
                 </li>
                 <li className="flex" >
@@ -46,8 +46,5 @@ export default function Panel(){
             </ul>
 
           </div>
-
-        
-        </aside>
     )
 }

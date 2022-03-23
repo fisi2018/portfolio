@@ -1,4 +1,3 @@
-import { useBurgerButton } from "../../hooks/useBurgerButton"
 import { useNav } from "../../stateManagement/contexts/NavContext"
 
 export default function BurgerButton(){
