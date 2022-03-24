@@ -5,7 +5,7 @@ import Header from "./Header";
 export default function Layout({children}):JSX.Element{
     const {nav}=useNav();
     return(
-        <section>
+        <section className="overflow-x-hidden">
             <Header/>
             <main className={` ${nav.active?"blur-md ":""}`}>
                 {children}

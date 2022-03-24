@@ -6,6 +6,24 @@ module.exports = {
   theme: {
     extend: {
       keyframes:{
+        prysmo:{
+          "0%":{['transform']:"translateX(0)"},
+          "15%":{['transform']:"translate(50%,-25%)"},
+          
+          "30%":{
+            ['transform']:"translate(100%,0)"
+          },
+          "50%":{
+            ['transform']:"translate(100%,50%)"
+          },
+          "65%":{
+            ['transform']:"translate(50%,75%)"
+          },
+          "80%":{
+            ['transform']:"translate(0,50%)"
+          },
+          "100%":{['transform']:"translate(0,0)"}
+        },
         typing:{
           'from':{width:0}
         },

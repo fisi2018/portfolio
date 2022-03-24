@@ -13,12 +13,14 @@ export const useHeader=()=>{
     },[nav.active]);
     const handleScroll=()=>{  
         if(window.scrollY>control.current){
+      
             control.current=window.scrollY;
-             headerRef.current.classList.add("-translate-y-full");
+             headerRef.current.style.transform="translateY(-100%)";
             }else{
                 if(window.scrollY<control.current){
+                  
                 control.current=window.scrollY;
-                  headerRef.current.classList.remove("-translate-y-full");
+                headerRef.current.style.transform="none";
                 }
             }
     }
