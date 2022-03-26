@@ -1,7 +1,13 @@
 import MoveTitle from "../components/common/MoveTitle";
 import Layout from "../components/layout";
 import {AiOutlineCheck} from "react-icons/ai";
+import { useScroll } from "../hooks/useScroll";
+import logoPrysmo from "../assets/images/logo_prysmo.png";
+import Image from "next/image";
+import Skills from "../components/common/Skills";
+import Formacion from "../components/common/Formacion";
 export default function About(){
+    const{component} =useScroll();
     return(
         <Layout>
             <MoveTitle title={"Acerca de mí"} />
@@ -11,8 +17,8 @@ export default function About(){
             <section className="min-h-screen flex justify-center items-center p-4 z-30" >
                 <p className="w-[40rem] text-2xl " >Mi nombre es Marco Josué Fura Mendoza, soy un desarrollador fullstack MERN con Nextjs y Typescript. Apasionado por la programación, gestión y en resolver problemas con soluciones digitales. </p>
             </section>
-            <section className="min-h-screen p-4 z-30 " >
-                <div className="z-30" >
+            <section block-scroll="block-scroll" className="min-h-screen mt-4 transition-all duration-1000 opacity-0 p-4 flex z-30 " >
+                <div  >
                 <h2 className="text-6xl tracking-wider  " >Habilidades</h2>
                 <ul className=" py-2 text-lg  w-[45rem] " >
                     <li className="my-2 flex " >
@@ -41,11 +47,11 @@ export default function About(){
                     </li>
                 </ul>
                 </div>
-                <div className="flex" >
-                    
+                <div className="flex items-center justify-center flex-1" >
+                    <Skills/>
                 </div>
             </section>
-            <section className="min-h-screen flex flex-row-reverse p-4 z-30 " >
+            <section block-scroll="block-scroll" className="min-h-screen transition-all duration-1000 opacity-0 flex flex-row-reverse p-4 z-30 " >
                 <div  >
                     <h2 className=" text-6xl " >Formación Profesional</h2>
                     <ul className="text-lg w-[40rem] " >
@@ -71,16 +77,28 @@ export default function About(){
                         </li>
                     </ul>
                 </div>
-                <div></div>
+                <div className="flex-1" >
+                    <Formacion/>
+                </div>
             </section>
             <section className="min-h-screen relative p-4 z-30 flex flex-col items-center" >
-                <h2 className="text-3xl" >¿Qué es Prysmo Solutions?</h2>
-                <p className="w-96 text-center" >Empresa encargada en el desarrollo de sitios web para startups, negocios no digitalizados y todo tipo de proyectos en general con diferentes tecnologías.</p>
-                <div className="w-96 h-[30rem] overflow-hidden bg-yellow-200 " >
-                <article className="w-4/5 -left-1/4 -top-1/4 relative h-4/5 bg-red-300 animate-[prysmo_5s_infinite] " >
-                <span className="w-4 h-4 bg-black absolute top-1/2 left-1/2 -mt-2 -ml-2 rounded-full animate-pulse " ></span>
+                <div ref={component} className="flex flex-col items-center w-full transition-all duration-1000 ease-out -translate-x-full " >
 
-                </article>
+                <h2 className="text-3xl" >¿Qué es Prysmo Solutions?</h2>
+                <div className="flex bg-gray-600 p-4 my-6 rounded-full" >
+
+                <Image width={80} height={80} src={logoPrysmo} />
+                </div>
+
+                <p className="w-96 text-center" >Empresa encargada en el desarrollo de sitios web para startups, negocios no digitalizados y todo tipo de proyectos en general con diferentes tecnologías.</p>
+                
+                <a target="_blank" href="https://prysmosolutions.com" className="before:transition-all before:ease-out before:duration-500 hover:before:w-[105%] hover:before:border-2 hover:before:h-[115%] before:block mt-8 before:w-1/2 before:h-1/2 before:border-t-2 before:border-l-2 before:absolute relative py-3 px-6 flex before:top-0 before:left-0 before:border-gray-800 
+                after:block after:transition-all after:ease-out after:duration-500 hover:after:w-[105%] hover:after:h-[115%] hover:after:border-2 after:w-1/2 after:h-1/2 after:border-b-2 after:border-r-2 after:absolute after:bottom-0 after:right-0 after:border-gray-800 " >
+                    <p className="z-30 bg-white" >
+
+                    Visitar página
+                    </p>
+                </a>
                 </div>
             </section>
             </div>

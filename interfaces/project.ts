@@ -4,5 +4,5 @@ export interface Project{
     description:string,
     techs:string,
     urlDemo:string,
-    urlGit?:String
+    urlGit?:string
 }

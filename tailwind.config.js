@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       keyframes:{
         prysmo:{
-          "0%":{['transform']:"translateX(0)"},
+          "0%":{['transform']:"translate(0,0)"},
           "15%":{['transform']:"translate(50%,-25%)"},
           
           "30%":{

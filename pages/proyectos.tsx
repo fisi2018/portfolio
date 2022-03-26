@@ -10,12 +10,12 @@ export default function Proyectos(){
         <MoveTitle title={"Mis proyectos"} />
         <div className="flex flex-col">
         <section className="min-h-screen flex flex-col items-center justify-center w-full z-30 p-4" >
-                <h1 className="text-3xl w-[40rem] text-center  " >"Si puedes imaginarlo, lo puedes programar. "</h1>
+                <h1 className="text-3xl w-[40rem] text-center  " >"Si puedes imaginarlo, puedes programarlo. "</h1>
                 <p className="font-light text-3xl" >-Alejandro Taboada-</p>
         </section>
         <section className="grid grid-cols-3 p-4 z-30 grid-flow-row gap-6" >
             {DB.map((project)=>(
-                <ProjectCard project={project} />
+                <ProjectCard key={project._id} project={project} />
             ))}
         </section>
         </div>
