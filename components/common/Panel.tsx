@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useNav } from "../../stateManagement/contexts/NavContext"
+import { useLang } from "../../stateManagement/contexts/LangContext";
+import { useNav } from "../../stateManagement/contexts/NavContext";
+import LangButton from "./LangButton";
 
 export default function Panel(){
     const {nav,changeTheme}=useNav();
+    const {state}=useLang();
     const {pathname}=useRouter();
     return(
         
@@ -11,26 +14,26 @@ export default function Panel(){
             <ul className="flex flex-col text-3xl" >
                 <li className="flex" >
                     <Link href="/" >
-                    <a className={`p-6 transition-all duration-300  ${pathname.split("/").pop()===""?"text-white":" hover:text-gray-300 "}`}  >Inicio</a>
+                    <a className={`p-6 transition-all duration-300  ${pathname.split("/").pop()===""?"text-white":" hover:text-gray-300 "}`}  >{state.content.panel.home}</a>
                     </Link>
                 </li>
                 <li className="flex" >
                     <Link href="/acerca-de" >
-                    <a className={`p-6 transition-all duration-300  ${pathname.split("/").pop()==="acerca-de"?"text-white":"hover:text-gray-300"} `}  >Acerca de</a>
+                    <a className={`p-6 transition-all duration-300  ${pathname.split("/").pop()==="acerca-de"?"text-white":"hover:text-gray-300"} `}  >{state.content.panel.about}</a>
                     </Link>
                 </li>
                 <li className="flex" >
                     <Link href="/proyectos" >
-                    <a className={`p-6  transition-all duration-300 ${pathname.split("/").pop()==="proyectos"?"text-white":"hover:text-gray-300"}`} >Proyectos</a>
+                    <a className={`p-6  transition-all duration-300 ${pathname.split("/").pop()==="proyectos"?"text-white":"hover:text-gray-300"}`} >{state.content.panel.projects}</a>
                     </Link>
                 </li>
                 <li className="flex" >
                     <Link href="/contacto" >
-                    <a className={`p-6  transition-all duration-300  ${pathname.split("/").pop()==="contacto"?"text-white":"hover:text-gray-300"} `} >Contacto</a>
+                    <a className={`p-6  transition-all duration-300  ${pathname.split("/").pop()==="contacto"?"text-white":"hover:text-gray-300"} `} >{state.content.panel.contact}</a>
                     </Link>
                 </li>
                 <li className="pl-6 my-4 flex" >
-                    <p className="text-xl mr-3 " >Tema</p>
+                    <p className="text-xl mr-3 " >{state.content.panel.theme}</p>
                     <button onClick={changeTheme} className="bg-gray-300  shadow-inner p-0.5 rounded-3xl w-16 flex items-center  " >
                     
                         <span className="flex shadow-2xl items-center text-base translate-x-0 dark:translate-x-9  transition-all duration-300 ease-out  rounded-full p-3 bg-gray-800 text-gray-300 justify-center" >
@@ -40,10 +43,8 @@ export default function Panel(){
                         
                     </button>
                 </li>
-                <li className="pl-6" >
-                    <button className="p-2 px-3 text-lg bg-gray-400 text-gray-800 rounded-lg " >
-                        Español(ES)
-                    </button>
+                <li className="pl-6 flex" >
+                    <LangButton/>
                 </li>
             </ul>
 

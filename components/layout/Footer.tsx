@@ -3,7 +3,7 @@ import { FiFacebook, FiGithub, FiLinkedin } from "react-icons/fi";
 
 export default function Footer():JSX.Element{
     return(
-        <footer className="p-4 bg-gray-800 flex flex-col items-center text-gray-200 " >
+        <footer className="p-4 bg-gray-900 dark:bg-black flex flex-col items-center text-gray-200 " >
             <nav className="w-full sm:w-40" >
                 <ul className="flex justify-between text-xl " >
                     <li>

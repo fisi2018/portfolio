@@ -1,7 +1,11 @@
+import { Lang } from "../types/stateTypes"
+
 export interface Project{
     _id:string,
-    title:string,
-    description:string,
+    title:{[index:string]:string
+    },
+    description:{[index:string]:string
+    },
     techs:string,
     urlDemo:string,
     urlGit?:string

@@ -30,6 +30,9 @@ module.exports = {
         },
         blink:{
           '50%':{['border-color']:'black'}
+        },
+        blinkDark:{
+          "50%":{['border-color']:'white'}
         }
       }
     },
