@@ -75,6 +75,12 @@ export default function About(){
                                 Fundación y gerencia de Prysmo Solutions hasta la actualidad.
                             </p>
                         </li>
+                         <li className="flex my-2" >
+                            <span className="flex items-center justify-center mr-3" ><AiOutlineCheck/></span>
+                            <p>
+                                Experiencia de 2 años construyendo aplicaciones web.
+                            </p>
+                        </li>
                     </ul>
                 </div>
                 <div className="flex-1" >

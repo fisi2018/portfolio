@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useNav } from "../../stateManagement/contexts/NavContext"
 
 export default function Panel(){
-    const {nav}=useNav();
+    const {nav,changeTheme}=useNav();
     const {pathname}=useRouter();
     return(
         
@@ -30,11 +30,13 @@ export default function Panel(){
                     </Link>
                 </li>
                 <li className="pl-6 my-4 flex" >
-                    <p className="text-xl mr-3" >Modo día</p>
-                    <button className="bg-gray-300 shadow-inner p-0.5 rounded-3xl w-16 flex items-center justify-between " >
-                        <span className="flex shadow-2xl items-center text-base rounded-full p-3 bg-gray-800 text-gray-300 justify-center" >
+                    <p className="text-xl mr-3 " >Tema</p>
+                    <button onClick={changeTheme} className="bg-gray-300  shadow-inner p-0.5 rounded-3xl w-16 flex items-center  " >
+                    
+                        <span className="flex shadow-2xl items-center text-base translate-x-0 dark:translate-x-9  transition-all duration-300 ease-out  rounded-full p-3 bg-gray-800 text-gray-300 justify-center" >
                             
                         </span>
+                     
                         
                     </button>
                 </li>

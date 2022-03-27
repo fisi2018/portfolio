@@ -3,5 +3,6 @@ export type StateNav={
 }
 export type ProviderValue={
     nav:StateNav,
-    toggleNav?:()=>void
+    toggleNav?:()=>void,
+    changeTheme?:()=>void
 }
