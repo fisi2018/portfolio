@@ -4,8 +4,8 @@ import { FiFacebook, FiGithub, FiLinkedin } from "react-icons/fi";
 export default function Footer():JSX.Element{
     return(
         <footer className="p-4 bg-gray-900 dark:bg-black flex flex-col items-center text-gray-200 " >
-            <nav className="w-full sm:w-40" >
-                <ul className="flex justify-between text-xl " >
+            <nav className="w-full sm:w-40 2xl:w-80" >
+                <ul className="flex justify-around sm:justify-between text-base lg-text-lg xl:text-xl 2xl:text-2xl " >
                     <li>
                         <a className="hover:text-purple-500 transition-all duration-300 ease-out" target="_blank" href="https://github.com/fisi2018">
                             <FiGithub/>
@@ -30,8 +30,8 @@ export default function Footer():JSX.Element{
             </nav>
             
             <hr className="w-[80%] my-4 border-gray-400 rounded-lg " />
-            <h1>© Copyright 2022, All rights reserved.</h1>
-            <p>Developed by Marco Fura</p>
+            <h1 className="text-sm sm:text-base 2xl:text-xl" >© Copyright 2022, All rights reserved.</h1>
+            <p className="text-sm sm:text-base 2xl:text-xl" >Developed by Marco Fura</p>
         </footer>
     )
 }

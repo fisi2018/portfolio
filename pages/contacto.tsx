@@ -12,11 +12,11 @@ export default function Contacto(){
             <MoveTitle title={state.content.pages.contact.moveTitle} />
             <div className="flex flex-col" >
                 <section className="min-h-screen flex justify-center items-center z-30" >
-                    <h1 className="w-[40rem] text-2xl dark:text-white " >{state.content.pages.contact.title}</h1>
+                    <h1 className="md:w-[40rem] 2xl:w-[50rem] w-full text-lg text-center 2xl:text-3xl md:text-2xl dark:text-white " >{state.content.pages.contact.title}</h1>
                 </section>
-                <section className="min-h-screen flex items-start justify-around p-4 z-30 " >
-                    <form className="flex dark:bg-gray-800 rounded-xl dark:shadow-sky-500 shadow-2xl flex-col p-12 pb-6 bg-white "  >
-                        <h2 className="mb-4 text-3xl font-bold uppercase text-gray-500 dark:text-gray-200 " >{state.content.pages.contact.form.title}</h2>
+                <section className="min-h-screen flex p-0 items-center xl:items-start flex-col xl:flex-row justify-around xl:p-4 z-30 " >
+                    <form className="flex 2xl:text-xl 2xl:w-[45rem] dark:bg-gray-800 rounded-xl dark:shadow-sky-500 shadow-2xl flex-col p-12 pb-6 bg-white "  >
+                        <h2 className="mb-4 text-3xl font-bold text-center uppercase text-gray-500 dark:text-gray-200 " >{state.content.pages.contact.form.title}</h2>
                         <article className="relative flex my-4  " >
                         <input className="p-1 dark:text-white bg-transparent w-full peer pt-0  outline-0 focus:border-black dark:focus:border-white transition-all duration-300 ease-out border-b-2 border-gray-400" name="name"  type="text" />
                         <span className="absolute pt-0 transition-all duration-500 ease-out p-1 top-0 text-gray-400 peer-focus:-translate-y-full peer-focus:p-0 peer-focus:text-xs peer-focus:text-black dark:peer-focus:text-white " >{state.content.pages.contact.form.name}</span>
@@ -44,9 +44,9 @@ export default function Contacto(){
                             </button>
 
                     </form>
-                    <div className="dark:text-white" >
-                        <h2 className="text-2xl" >{state.content.pages.contact.description} </h2>
-                        <ul className="text-xl" >
+                    <div className="dark:text-white p-4 mt-6 xl:m-0" >
+                        <h2 className="md:text-2xl text-lg " >{state.content.pages.contact.description} </h2>
+                        <ul className="md:text-xl text-base" >
                             <li className="flex my-3 " >
                                 <span className="flex justify-center mr-2 items-center" >
                                     <HiOutlineMail/>

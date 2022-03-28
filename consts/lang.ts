@@ -71,7 +71,7 @@ export const LANG={
             home:"Home",
             about:"About me",
             projects:"Projects",
-            contact:"Contacts",
+            contact:"Contact",
             theme:"Theme",
             langSelected:englishlang,
             langs:[{img:spanishlang,lang:Lang.Es}]
