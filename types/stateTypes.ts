@@ -10,6 +10,12 @@ export type ProviderLang={
     state:StateLang,
     changeLang?:(lang:Lang)=>void
 }
+export type ContactFormType={
+    name?:string,
+    email:string,
+    message:string,
+    subject?:string
+}
 export type StateLang={
     content:{
         panel:{
