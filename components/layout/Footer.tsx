@@ -22,7 +22,7 @@ export default function Footer():JSX.Element{
                         </a>
                     </li>
                     <li>
-                        <a className="hover:text-red-500 transition-all duration-300 ease-out" target="_blank" href="/pdfs/cv-marco-fura.pdf">
+                        <a className="hover:text-red-500 transition-all duration-300 ease-out" target="_blank" href="/pdfs/cv-marco.pdf">
                             <AiOutlineFilePdf/>
                         </a>
                     </li>
