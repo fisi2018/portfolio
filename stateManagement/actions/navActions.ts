@@ -1,3 +1,3 @@
-export const NAV_ACTIONS:{[index:string]:string}={
-    TOGGLE_NAV:"TOGGLE_NAV"
+export const NAV_ACTIONS:{[index:string]:string} = {
+  TOGGLE_NAV: 'TOGGLE_NAV'
 }

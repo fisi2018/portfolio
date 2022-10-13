@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+import type { StaticImageData } from 'next/image'
+
 export type StateNav={
     active:boolean
 }
@@ -6,15 +9,9 @@ export type ProviderValue={
     toggleNav?:()=>void,
     changeTheme?:()=>void
 }
-export type ProviderLang={
-    state:StateLang,
-    changeLang?:(lang:Lang)=>void
-}
-export type ContactFormType={
-    name?:string,
-    email:string,
-    message:string,
-    subject?:string
+export enum Lang{
+    Es='Español',
+    En='English'
 }
 export type StateLang={
     content:{
@@ -25,7 +22,7 @@ export type StateLang={
             contact:string,
             theme:string,
             langSelected:StaticImageData,
-            langs:{img:StaticImageData,lang:Lang}[]
+            langs:{img:StaticImageData, lang:Lang}[]
         },
         pages:{
             index:{
@@ -69,7 +66,13 @@ export type StateLang={
     },
     lang:Lang
 }
-export enum Lang{
-    Es="Español",
-    En="English"
+export type ProviderLang={
+    state:StateLang,
+    changeLang?:(lang:Lang)=>void
+}
+export type ContactFormType={
+    name?:string,
+    email:string,
+    message:string,
+    subject?:string
 }

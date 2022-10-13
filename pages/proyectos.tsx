@@ -1,13 +1,11 @@
-import Link from "next/link";
-import { AiOutlineFolderOpen } from "react-icons/ai";
-import MoveTitle from "../components/common/MoveTitle";
-import ProjectCard from "../components/common/ProjectCard";
-import Layout from "../components/layout";
-import {DB} from "../consts/db";
-import { useLang } from "../stateManagement/contexts/LangContext";
-export default function Proyectos(){
-    const {state}=useLang();
-    return(
+import MoveTitle from '../components/common/MoveTitle'
+import ProjectCard from '../components/common/ProjectCard'
+import Layout from '../components/layout'
+import { DB } from '../consts/db'
+import { useLang } from '../stateManagement/contexts/LangContext'
+export default function Proyectos () {
+  const { state } = useLang()
+  return (
     <Layout>
         <MoveTitle title={state.content.pages.projects.moveTitle} />
         <div className="flex flex-col">
@@ -16,12 +14,12 @@ export default function Proyectos(){
                 <p className="font-light text-xl md:text-3xl sm:text-2xl 2xl:text-5xl " >-Alejandro Taboada-</p>
         </section>
         <section className="grid grid-cols-1 md:grid-cols-3 p-4 z-30 grid-flow-row gap-8 md:gap-6" >
-            {DB.map((project)=>(
+            {DB.map((project) => (
                 <ProjectCard key={project._id} lang={state.lang} project={project} />
             ))}
         </section>
         </div>
     </Layout>
 
-    )
+  )
 }

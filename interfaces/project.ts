@@ -1,4 +1,3 @@
-import { Lang } from "../types/stateTypes"
 
 export interface Project{
     _id:string,

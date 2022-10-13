@@ -1,14 +1,14 @@
-import MoveTitle from "../components/common/MoveTitle";
-import Layout from "../components/layout";
-import { HiOutlineMail } from "react-icons/hi";
-import { BsTelephone } from "react-icons/bs";
-import { useLang } from "../stateManagement/contexts/LangContext";
-import ContactForm from "../components/common/ContactForm";
+import MoveTitle from '../components/common/MoveTitle'
+import Layout from '../components/layout'
+import { HiOutlineMail } from 'react-icons/hi'
+import { BsTelephone } from 'react-icons/bs'
+import { useLang } from '../stateManagement/contexts/LangContext'
+import ContactForm from '../components/common/ContactForm'
 
-export default function Contacto(){
-    const {state}=useLang();
-    
-    return(
+export default function Contacto () {
+  const { state } = useLang()
+
+  return (
         <Layout>
             <MoveTitle title={state.content.pages.contact.moveTitle} />
             <div className="flex flex-col" >
@@ -36,12 +36,12 @@ export default function Contacto(){
                                 <span className="flex justify-center mr-2 items-center" >
                                     <BsTelephone/>
                                 </span>
-                                <p>+51 945660575</p>
+                                <p>+51 912219330</p>
                             </li>
                         </ul>
                     </div>
                 </section>
             </div>
         </Layout>
-    )
+  )
 }
