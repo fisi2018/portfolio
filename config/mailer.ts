@@ -10,9 +10,12 @@ const transporter = nodemailer.createTransport({
     pass: PASSWORD
   }
 })
-transporter.verify().then(() => {
-  console.log('listo para enviar email')
-}).catch((error) => {
-  console.log('error encontrado en nodemailer ', error)
-})
+transporter
+  .verify()
+  .then(() => {
+    console.log('listo para enviar email')
+  })
+  .catch((error) => {
+    console.log('error encontrado en nodemailer ', error)
+  })
 export const transport = transporter

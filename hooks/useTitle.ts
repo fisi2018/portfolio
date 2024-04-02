@@ -8,7 +8,10 @@ export const useTitle = () => {
   }, [])
   const handleMoveTitle = () => {
     if (titleMov.current) {
-      const porcentage:number = window.scrollY / Math.round(document.body.scrollHeight - window.innerHeight) * 100
+      const porcentage: number =
+        (window.scrollY /
+          Math.round(document.body.scrollHeight - window.innerHeight)) *
+        100
       const newClass = `translate-x-[${porcentage.toFixed(2)}%]`
       titleMov.current.style.transform = `translateX(${porcentage.toFixed(2)}%)`
       olderClass.current = newClass

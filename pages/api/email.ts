@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { transport } from '../../config/mailer'
 import { EMAIL } from '../../consts/envs'
-export default async (req:NextApiRequest, res:NextApiResponse) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, subject, message, email } = req.body
   try {
     const info = await transport.sendMail({
@@ -25,7 +25,10 @@ export default async (req:NextApiRequest, res:NextApiResponse) => {
                 </ul>
             `
     })
-    if (info.err) return res.status(500).send({ message: 'Error ocurrido al enviar emails' })
+    if (info.err)
+      return res
+        .status(500)
+        .send({ message: 'Error ocurrido al enviar emails' })
     return res.status(200).send({
       message: 'Email enviado correctamente'
     })

@@ -9,20 +9,16 @@ const LangContext = createContext<ProviderLang>({
     lang: Lang.Es
   }
 })
-type Props={
-    children?:ReactNode
+type Props = {
+  children?: ReactNode
 }
-export const LangProvider = ({ children }:Props) => {
+export const LangProvider = ({ children }: Props) => {
   const [state, dispatch] = useReducer(langReducer, initialLang)
-  const changeLang:(lang:Lang)=>void = (lang) => {
+  const changeLang: (lang: Lang) => void = (lang) => {
     dispatch({ type: lang })
   }
-  const value:ProviderLang = { state, changeLang }
-  return (
-        <LangContext.Provider value={value} >
-            {children}
-        </LangContext.Provider>
-  )
+  const value: ProviderLang = { state, changeLang }
+  return <LangContext.Provider value={value}>{children}</LangContext.Provider>
 }
 export const useLang = () => {
   const value = useContext(LangContext)
