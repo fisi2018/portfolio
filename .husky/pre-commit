@@ -1,0 +1,16 @@
+#!/bin/sh
+# Ejecutar pnpm lint
+pnpm lint
+
+# Verificar el estado de salida de pnpm lint
+if [ $? -ne 0 ]; then
+  exit 1
+fi
+
+# Ejecutar pnpm format
+pnpm format
+
+# Verificar el estado de salida de pnpm format
+if [ $? -ne 0 ]; then
+  exit 1
+fi
