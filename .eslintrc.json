@@ -5,6 +5,7 @@
     "node": true
   },
   "extends": [
+    "next/core-web-vitals",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "standard",
@@ -18,6 +19,6 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react"],
   "rules": {}
 }

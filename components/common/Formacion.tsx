@@ -4,7 +4,7 @@ export default function Formacion() {
   return (
     <aside className="flex flex-col items-center p-4 w-full ">
       <div className="flex relative">
-        <Image layout="intrinsic" src={unmsmlogo} />
+        <Image layout="intrinsic" src={unmsmlogo} alt="" />
       </div>
     </aside>
   )

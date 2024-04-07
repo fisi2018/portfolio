@@ -14,7 +14,7 @@ export default function Panel() {
     >
       <ul className="flex flex-col text-xl xl:text-3xl 2xl:text-4xl">
         <li className="flex">
-          <Link href="/">
+          <Link legacyBehavior href="/">
             <a
               className={`p-6 transition-all duration-300  ${pathname.split('/').pop() === '' ? 'text-white' : ' hover:text-gray-300 '}`}
             >
@@ -23,7 +23,7 @@ export default function Panel() {
           </Link>
         </li>
         <li className="flex">
-          <Link href="/acerca-de">
+          <Link legacyBehavior href="/acerca-de">
             <a
               className={`p-6 transition-all duration-300  ${pathname.split('/').pop() === 'acerca-de' ? 'text-white' : 'hover:text-gray-300'} `}
             >
@@ -32,7 +32,7 @@ export default function Panel() {
           </Link>
         </li>
         <li className="flex">
-          <Link href="/proyectos">
+          <Link legacyBehavior href="/proyectos">
             <a
               className={`p-6  transition-all duration-300 ${pathname.split('/').pop() === 'proyectos' ? 'text-white' : 'hover:text-gray-300'}`}
             >
@@ -41,7 +41,7 @@ export default function Panel() {
           </Link>
         </li>
         <li className="flex">
-          <Link href="/contacto">
+          <Link legacyBehavior href="/contacto">
             <a
               className={`p-6  transition-all duration-300  ${pathname.split('/').pop() === 'contacto' ? 'text-white' : 'hover:text-gray-300'} `}
             >
