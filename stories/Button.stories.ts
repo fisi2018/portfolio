@@ -54,7 +54,7 @@ export const Small: Story = {
 export const Warning: Story = {
   args: {
     primary: true,
-    label: 'Delete now',
+    label: 'Delete ahora',
     backgroundColor: 'red'
   }
 }
