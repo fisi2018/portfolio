@@ -5,9 +5,9 @@ import { AiOutlineCheck } from 'react-icons/ai'
 import { useScroll } from '../hooks/useScroll'
 import logoPrysmo from '../assets/images/logo_prysmo.png'
 import Image from 'next/image'
-import Skills from '../components/common/Skills'
 import Formacion from '../components/common/Formacion'
 import { useLang } from '../stateManagement/contexts/LangContext'
+import { CardExperience } from '../components/common/CardExperience'
 export default function About() {
   const { component } = useScroll()
   const { state } = useLang()
@@ -26,22 +26,16 @@ export default function About() {
           className="min-h-screen mt-4 dark:text-white transition-all duration-1000 opacity-0 p-4 flex items-center flex-col 2xl:justify-around lg:flex-row z-30 "
         >
           <div className="sm:p-4">
-            <h2 className="sm:text-5xl md:text-6xl 2xl:text-7xl text-4xl text-center lg:text-left tracking-wider  ">
-              {state.content.pages.about.skills.subtitle}
+            <h2 className="sm:text-5xl md:text-6xl 2xl:text-7xl text-4xl text-center tracking-wider  ">
+              {state.content.pages.about.experience.subtitle}
             </h2>
-            <ul className=" py-2 text-sm sm:text-base xl:text-lg 2xl:text-xl w-full lg:w-[35rem] xl:w-[45rem] 2xl:w-[55rem] ">
-              {state.content.pages.about.skills.list.map((el, i) => (
-                <li className="my-2 flex " key={i}>
-                  <span className="flex items-center justify-center mr-3">
-                    <AiOutlineCheck />
-                  </span>{' '}
-                  <p>{el}</p>
+            <ul className=" py-2 text-sm sm:text-base xl:text-lg 2xl:text-xl w-full lg:w-[35rem] xl:w-[45rem] 2xl:w-[55rem] grid grid-cols-2 gap-4">
+              {state.content.pages.about.experience.list.map((el, i) => (
+                <li className="flex" key={i}>
+                  <CardExperience {...el} />
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="flex items-center sm:w-4/5 2xl:flex-none 2xl:w-[45rem] justify-center flex-1">
-            <Skills />
           </div>
         </section>
         <section
@@ -50,10 +44,10 @@ export default function About() {
         >
           <div className="sm:p-4">
             <h2 className="text-4xl sm:text-5xl text-center lg:text-left 2xl:text-7xl xl:text-6xl ">
-              {state.content.pages.about.experience.subtitle}
+              {state.content.pages.about.education.subtitle}
             </h2>
             <ul className="text-sm sm:text-base xl:text-lg 2xl:text-xl w-full lg:w-[30rem] xl:w-[40rem] mt-4 ">
-              {state.content.pages.about.experience.list.map((el, i) => (
+              {state.content.pages.about.education.list.map((el, i) => (
                 <li className="flex my-2" key={i}>
                   <span className="flex items-center justify-center mr-3">
                     <AiOutlineCheck />

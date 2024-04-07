@@ -20,7 +20,7 @@ export const LANG = {
       about: {
         moveTitle: 'Acerca de mí',
         title:
-          'Marco Josué Fura Mendoza, soy un desarrollador fullstack MERN con Nextjs y Typescript. Apasionado por la programación, gestión y en resolver problemas con soluciones digitales.',
+          'Hola, soy Marco, un Ingeniero de Software especialista en resolver problemas con soluciones digitales.',
         skills: {
           subtitle: 'Habilidades',
           list: [
@@ -35,12 +35,65 @@ export const LANG = {
           ]
         },
         experience: {
-          subtitle: 'Formación profesional',
+          subtitle: 'Experiencia Laboral',
           list: [
-            'Formación en Ingeniería de Software en la Universidad Nacional Mayor de San Marcos (2017 - Actualidad)',
-            'Idioma español nativo e inglés intermedio en el Centro de idiomas de la UNMSM',
+            {
+              title: 'Fullstack Developer',
+              subtitle: 'Katari',
+              description: [
+                'Implementación de features en la plataforma web de la empresa, usando PHP, Codeigniter, MySQL, JQuery.',
+                'Creación de un sistema de lectura para usuarios externos elaborado con Nextjs, Reactjs, Redux, Redux-Saga, Nodejs, Fastify.',
+                'Implementación de features en una plataforma de gestión de Recursos Humanos, usando Reactjs, Redux, Redux-Saga, Python, Fastapi, PostgreSQL.',
+                'Implementación de un sistema de tracking de Social Listening.',
+                'Optimización en el tiempo de respuesta de la plataforma principal.'
+              ],
+              rangeDate: '2022 - Actualidad'
+            },
+            {
+              title: 'Ingeniero de Software',
+              subtitle: 'Prysmo Solutions',
+              description: [
+                'Desarrollo de un sistema de gestión de Licitaciones para consultora eléctrica con Nextjs.',
+                'Capacitación en el uso de Nextjs y Reactjs con buenas prácticas.',
+                'Dirección de equipos agile de trabajo.',
+                'Desarrollo de un app mobile de gestión de técnicos eléctricos para consultora eléctrica con React Native.',
+                'Implementación de API de Google Maps para la visualización de ubicaciones de técnicos eléctricos.'
+              ],
+              rangeDate: '2022 - Actualidad'
+            },
+            {
+              title: 'Fundador y CEO',
+              subtitle: 'Prysmo Solutions',
+              description: [
+                'Gestión de Proyectos con la metodología SCRUM.',
+                'Desarrollo de cronogramas de actividades.',
+                'Reunión con clientes para la recolección de requerimientos.',
+                'Desarrollo de alcances del proyecto.',
+                'Desarrollo de planes de costos.'
+              ],
+              rangeDate: '2021 - 2022'
+            },
+            {
+              title: 'Fullstack Developer',
+              subtitle: 'Senergy',
+              description: [
+                'Elaboración de CMS para la gestión de contenido de la empresa.',
+                'Implementación de API usando Nodejs, Express, MongoDB.',
+                'Implementación de un sistema de autenticación y autorización.',
+                'Reunión con clientes para la recolección de requerimientos.'
+              ],
+              rangeDate: '2021 - 2022'
+            }
+          ]
+        },
+        education: {
+          subtitle: 'Formación Profesional',
+          list: [
+            'Ingeniería de Software en la Universidad Nacional Mayor de San Marcos (2017 - 2022)',
+            'Maestría en Inteligencia Artificial en la Pontificia Universidad Católica de Chile (2024 - Actualidad)',
             'Fundación y Gerencia de Prysmo Solutions hasta la actualidad.',
-            'Experiencia de 3 años construyendo aplicaciones web.'
+            'Publicación de artículo: Neural Network Strategies and Models for Voice Cloning in a Multi-speaker Mode: An Overview (ICIT 2022).',
+            'Experiencia de 3 años desarrollando software.'
           ]
         },
         prysmo: {
@@ -88,7 +141,7 @@ export const LANG = {
       about: {
         moveTitle: 'About me',
         title:
-          'Marco Fura Mendoza, im a MERN fullstack developer using Nextjs and Typescript. Passionate about programming, management and solving problems with digital solutions ',
+          'Hey, my name is Marco and i am a software engineer specialist in solving problems with digital solutions',
         skills: {
           subtitle: 'Skills',
           list: [
@@ -105,8 +158,60 @@ export const LANG = {
         experience: {
           subtitle: 'Experience',
           list: [
-            'Studies in Software Engineering at Universidad Nacional Mayor de San Marcos (2017 - Present)',
-            'Spanish language native and intermediate english at the UNMSM language center',
+            {
+              title: 'Fullstack Developer',
+              subtitle: 'Katari',
+              description: `
+              - Implementación de features en la plataforma web de la empresa, usando PHP, Codeigniter, MySQL, JQuery.
+              - Creación de un sistema de lectura para usuarios externos elaborado con Nextjs, Reactjs, Redux, Redux-Saga, Nodejs, Fastify.
+              - Implementación de features en una plataforma de gestión de Recursos Humanos, usando Reactjs, Redux, Redux-Saga, Python, Fastapi, PostgreSQL.
+              - Implementación de un sistema de tracking de Social Listening.
+              - Optimización en el tiempo de respuesta de la plataforma principal.
+              `,
+              rangeDate: '2022 - Actualidad'
+            },
+            {
+              title: 'Ingeniero de Software',
+              subtitle: 'Prysmo Solutions',
+              description: `
+              - Desarrollo de un sistema de gestión de Licitaciones para consultora eléctrica con Nextjs.
+              - Capacitación en el uso de Nextjs y Reactjs con buenas prácticas.
+              - Dirección de equipos agile de trabajo.
+              - Desarrollo de un app mobile de gestión de técnicos eléctricos para consultora eléctrica con React Native.
+              - Implementación de API de Google Maps para la visualización de ubicaciones de técnicos eléctricos.
+              `,
+              rangeDate: '2022 - Actualidad'
+            },
+            {
+              title: 'Fundador y CEO',
+              subtitle: 'Prysmo Solutions',
+              description: `
+              - Gestión de Proyectos con la metodología SCRUM.
+              - Desarrollo de cronogramas de actividades.
+              - Reunión con clientes para la recolección de requerimientos.
+              - Desarrollo de alcances del proyecto.
+              - Desarrollo de planes de costos.
+              `,
+              rangeDate: '2021 - 2022'
+            },
+            {
+              title: 'Fullstack Developer',
+              subtitle: 'Senergy',
+              description: `
+              - Elaboración de CMS para la gestión de contenido de la empresa.
+              - Implementación de API usando Nodejs, Express, MongoDB.
+              - Implementación de un sistema de autenticación y autorización.
+              - Reunión con clientes para la recolección de requerimientos.
+              `,
+              rangeDate: '2021 - 2022'
+            }
+          ]
+        },
+        education: {
+          subtitle: 'Education',
+          list: [
+            'Software Engineering at Universidad Nacional Mayor de San Marcos (2017 - 2022)',
+            'Master in Artificial Intelligence at Pontificia Universidad Católica de Chile (2024 - Present)',
             'Foundation and management of Prysmo Solutions until today.',
             'Three years experience building web applications.'
           ]
