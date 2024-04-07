@@ -13,7 +13,7 @@ export default function Header() {
       }
     >
       <div className="flex overflow-hidden dark:rounded-full ">
-        <Image width={48} height={48} src={logoPortfolio} />
+        <Image width={48} height={48} src={logoPortfolio} alt="" />
       </div>
       <BurgerButton />
       <Panel />

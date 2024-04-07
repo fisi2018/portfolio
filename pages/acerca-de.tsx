@@ -76,7 +76,7 @@ export default function About() {
               {state.content.pages.about.prysmo.subtitle}
             </h2>
             <div className="flex bg-gray-600 w-48 h-48 p-4 justify-center dark:bg-transparent my-6 rounded-full">
-              <Image layout="intrinsic" src={logoPrysmo} />
+              <Image layout="intrinsic" src={logoPrysmo} alt="" />
             </div>
 
             <p className=" w-full sm:w-96 xl:w-96 sm:text-base text-sm 2xl:text-xl text-center">

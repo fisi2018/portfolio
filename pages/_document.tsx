@@ -3,7 +3,6 @@ export default function Document() {
   return (
     <Html lang="es">
       <Head>
-        <title>Marco Fura - Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <body>

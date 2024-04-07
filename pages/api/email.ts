@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { transport } from '../../config/mailer'
 import { EMAIL } from '../../consts/envs'
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, subject, message, email } = req.body
   try {
     const info = await transport.sendMail({
@@ -39,3 +39,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     })
   }
 }
+export default sendEmail
