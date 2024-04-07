@@ -18,7 +18,8 @@ export const LANG = {
       },
       about: {
         moveTitle: 'Acerca de mí',
-        title: 'Marco Josué Fura Mendoza, soy un desarrollador fullstack MERN con Nextjs y Typescript. Apasionado por la programación, gestión y en resolver problemas con soluciones digitales.',
+        title:
+          'Marco Josué Fura Mendoza, soy un desarrollador fullstack MERN con Nextjs y Typescript. Apasionado por la programación, gestión y en resolver problemas con soluciones digitales.',
         skills: {
           subtitle: 'Habilidades',
           list: [
@@ -43,7 +44,8 @@ export const LANG = {
         },
         prysmo: {
           subtitle: '¿Qué es Prysmo Solutions?',
-          description: 'Empresa especializada en el desarrollo de sitios web para startups, negocios no digitalizados y todo tipo de proyectos en general con diferentes tecnologías.',
+          description:
+            'Empresa especializada en el desarrollo de sitios web para startups, negocios no digitalizados y todo tipo de proyectos en general con diferentes tecnologías.',
           button: 'Visitar página'
         }
       },
@@ -52,7 +54,8 @@ export const LANG = {
         moveTitle: 'Mis proyectos'
       },
       contact: {
-        title: 'Siempre abierto para escuchar nuevas consultas y oportunidades. Para cualquier consulta puedes ponerte en contacto conmigo por cualquiera de los medios mostrados abajo.',
+        title:
+          'Siempre abierto para escuchar nuevas consultas y oportunidades. Para cualquier consulta puedes ponerte en contacto conmigo por cualquiera de los medios mostrados abajo.',
         moveTitle: 'Contacto',
         form: {
           title: 'Escríbeme tus consultas',
@@ -82,7 +85,8 @@ export const LANG = {
       },
       about: {
         moveTitle: 'About me',
-        title: 'Marco Fura Mendoza, im a MERN fullstack developer using Nextjs and Typescript. Passionate about programming, management and solving problems with digital solutions ',
+        title:
+          'Marco Fura Mendoza, im a MERN fullstack developer using Nextjs and Typescript. Passionate about programming, management and solving problems with digital solutions ',
         skills: {
           subtitle: 'Skills',
           list: [
@@ -107,7 +111,8 @@ export const LANG = {
         },
         prysmo: {
           subtitle: 'What is Prysmo Solutions?',
-          description: 'Company specialized in the development of websites for startups, non-digitized businesses and all kinds of projects in general with different technologies.',
+          description:
+            'Company specialized in the development of websites for startups, non-digitized businesses and all kinds of projects in general with different technologies.',
           button: 'Go WebSite'
         }
       },
@@ -116,7 +121,8 @@ export const LANG = {
         moveTitle: 'My projects'
       },
       contact: {
-        title: 'Always open to listen to new inquiries and opportunities. For any questions you can contact me by any of the means shown below.',
+        title:
+          'Always open to listen to new inquiries and opportunities. For any questions you can contact me by any of the means shown below.',
         moveTitle: 'Contact',
         form: {
           title: 'Write me your questions',
