@@ -28,7 +28,7 @@ export default function Home() {
             dark:animate-[typing_5s_steps(31),blinkDark_.5s_10_step-end_alternate]
             animate-[typing_5s_steps(31),blink_.5s_10_step-end_alternate] overflow-hidden "
         >
-          FullStack Developer Nextjs MERN
+          {state.content.pages.index.description}
         </h3>
       </section>
     </Layout>

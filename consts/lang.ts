@@ -14,7 +14,8 @@ export const LANG = {
     },
     pages: {
       index: {
-        title: 'Fundador & CEO en Prysmo Solutions'
+        title: 'Fundador & CEO en Prysmo Solutions',
+        description: 'Ingeniero de Software'
       },
       about: {
         moveTitle: 'Acerca de mí',
@@ -81,7 +82,8 @@ export const LANG = {
     },
     pages: {
       index: {
-        title: 'Founder & CEO at Prysmo Solutions'
+        title: 'Founder & CEO at Prysmo Solutions',
+        description: 'Software Engineer'
       },
       about: {
         moveTitle: 'About me',

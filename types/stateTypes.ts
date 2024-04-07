@@ -27,6 +27,7 @@ export type StateLang = {
     pages: {
       index: {
         title: string
+        description: string
       }
       about: {
         moveTitle: string
