@@ -1,5 +1,5 @@
 import { AiOutlineFilePdf } from 'react-icons/ai'
-import { FiFacebook, FiGithub, FiLinkedin } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiYoutube } from 'react-icons/fi'
 
 export default function Footer() {
   return (
@@ -18,14 +18,15 @@ export default function Footer() {
           </li>
           <li>
             <a
-              className="hover:text-sky-500 transition-all duration-300 ease-out"
+              className="hover:text-red-500 transition-all duration-300 ease-out"
               target="_blank"
-              href="https://web.facebook.com/marcojosue.furamendoza/"
+              href="https://www.youtube.com/channel/UCRi4Ohhxsd-lzxxs3e1qECQ"
               rel="noreferrer"
             >
-              <FiFacebook />
+              <FiYoutube />
             </a>
           </li>
+
           <li>
             <a
               className="hover:text-blue-500 transition-all duration-300 ease-out"
@@ -40,7 +41,7 @@ export default function Footer() {
             <a
               className="hover:text-red-500 transition-all duration-300 ease-out"
               target="_blank"
-              href="/pdfs/cv-marco.pdf"
+              href="/pdfs/cv-marco-fura.pdf"
             >
               <AiOutlineFilePdf />
             </a>

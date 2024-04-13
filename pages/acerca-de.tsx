@@ -5,9 +5,9 @@ import { AiOutlineCheck } from 'react-icons/ai'
 import { useScroll } from '../hooks/useScroll'
 import logoPrysmo from '../assets/images/logo_prysmo.png'
 import Image from 'next/image'
-import Skills from '../components/common/Skills'
 import Formacion from '../components/common/Formacion'
 import { useLang } from '../stateManagement/contexts/LangContext'
+import { CardExperience } from '../components/common/CardExperience'
 export default function About() {
   const { component } = useScroll()
   const { state } = useLang()
@@ -15,7 +15,7 @@ export default function About() {
     <Layout>
       <MoveTitle title={state.content.pages.about.moveTitle} />
 
-      <div className="flex flex-col ">
+      <div className="flex flex-col">
         <section className="min-h-screen flex justify-center items-center p-4 z-30">
           <p className=" w-full sm:w-96 md:w-[40rem] text-base text-center sm:text-xl md:text-2xl 2xl:text-3xl dark:text-white ">
             {state.content.pages.about.title}{' '}
@@ -25,35 +25,31 @@ export default function About() {
           block-scroll="block-scroll"
           className="min-h-screen mt-4 dark:text-white transition-all duration-1000 opacity-0 p-4 flex items-center flex-col 2xl:justify-around lg:flex-row z-30 "
         >
-          <div className="sm:p-4">
-            <h2 className="sm:text-5xl md:text-6xl 2xl:text-7xl text-4xl text-center lg:text-left tracking-wider  ">
-              {state.content.pages.about.skills.subtitle}
+          <div className="sm:p-4 flex flex-col justify-between min-h-full w-full">
+            <h2 className="sm:text-5xl md:text-6xl 2xl:text-7xl text-4xl text-center tracking-wider  ">
+              {state.content.pages.about.experience.subtitle}
             </h2>
-            <ul className=" py-2 text-sm sm:text-base xl:text-lg 2xl:text-xl w-full lg:w-[35rem] xl:w-[45rem] 2xl:w-[55rem] ">
-              {state.content.pages.about.skills.list.map((el, i) => (
-                <li className="my-2 flex " key={i}>
-                  <span className="flex items-center justify-center mr-3">
-                    <AiOutlineCheck />
-                  </span>{' '}
-                  <p>{el}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="flex items-center sm:w-4/5 2xl:flex-none 2xl:w-[45rem] justify-center flex-1">
-            <Skills />
+            <div className=" py-8 text-sm sm:text-base xl:text-lg 2xl:text-xl w-full px-16 ">
+              <ul className=" py-8 w-full flex flex-nowrap gap-8 overflow-x-auto snap-x px-8 ">
+                {state.content.pages.about.experience.list.map((el, i) => (
+                  <li className="flex snap-start " key={i}>
+                    <CardExperience {...el} />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
         <section
           block-scroll="block-scroll"
-          className="min-h-screen dark:text-white transition-all duration-1000 opacity-0 flex flex-col items-center lg:flex-row-reverse lg:justify-around  p-4 z-30 "
+          className=" min-h-screen dark:text-white transition-all duration-1000 opacity-0 flex flex-col items-center lg:flex-row-reverse lg:justify-around  p-4 z-30 "
         >
           <div className="sm:p-4">
             <h2 className="text-4xl sm:text-5xl text-center lg:text-left 2xl:text-7xl xl:text-6xl ">
-              {state.content.pages.about.experience.subtitle}
+              {state.content.pages.about.education.subtitle}
             </h2>
             <ul className="text-sm sm:text-base xl:text-lg 2xl:text-xl w-full lg:w-[30rem] xl:w-[40rem] mt-4 ">
-              {state.content.pages.about.experience.list.map((el, i) => (
+              {state.content.pages.about.education.list.map((el, i) => (
                 <li className="flex my-2" key={i}>
                   <span className="flex items-center justify-center mr-3">
                     <AiOutlineCheck />
@@ -67,7 +63,7 @@ export default function About() {
             <Formacion />
           </div>
         </section>
-        <section className="min-h-screen relative p-4 z-30 flex flex-col dark:text-white items-center">
+        <section className=" min-h-screen relative p-4 z-30 flex flex-col dark:text-white items-center">
           <div
             ref={component}
             className="flex flex-col items-center w-full transition-all duration-1000 ease-out -translate-x-full "

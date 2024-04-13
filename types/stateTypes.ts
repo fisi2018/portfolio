@@ -9,6 +9,12 @@ export type ProviderValue = {
   toggleNav?: () => void
   changeTheme?: () => void
 }
+export interface ExperienceItem {
+  title: string
+  subtitle: string
+  description: string | string[]
+  rangeDate: string
+}
 export enum Lang {
   Es = 'Español',
   En = 'English'
@@ -27,6 +33,7 @@ export type StateLang = {
     pages: {
       index: {
         title: string
+        description: string
       }
       about: {
         moveTitle: string
@@ -36,6 +43,10 @@ export type StateLang = {
           list: string[]
         }
         experience: {
+          subtitle: string
+          list: ExperienceItem[]
+        }
+        education: {
           subtitle: string
           list: string[]
         }
