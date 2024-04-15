@@ -1,10 +1,17 @@
-import unmsmlogo from '../../assets/images/unmsmlogo.png'
+import unmsmlogo from '../../assets/images/education/unmsmlogo.png'
+import ucLogo from '../../assets/images/education/logo_uc_front.png'
 import Image from 'next/image'
 export default function Formacion() {
   return (
-    <aside className="flex flex-col items-center p-4 w-full ">
-      <div className="flex relative">
-        <Image layout="intrinsic" src={unmsmlogo} alt="" />
+    <aside className="grid grid-cols-2  gap-4 p-4 w-full items-center">
+      <div className="">
+        <Image
+          src={unmsmlogo}
+          alt="Universidad Nacional Mayor de San Marcos Logo"
+        />
+      </div>
+      <div className="">
+        <Image src={ucLogo} alt="UC logo" />
       </div>
     </aside>
   )
