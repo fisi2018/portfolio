@@ -12,6 +12,9 @@ export const navReducer: (
     case NAV_ACTIONS.TOGGLE_NAV: {
       return state.active ? { active: false } : { active: true }
     }
+    case NAV_ACTIONS.CLOSE_NAV: {
+      return { active: false }
+    }
     default: {
       return state
     }

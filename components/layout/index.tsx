@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, useEffect } from 'react'
 import { useNav } from '../../stateManagement/contexts/NavContext'
 import Footer from './Footer'
 import Header from './Header'
@@ -6,7 +6,10 @@ type Props = {
   children?: ReactNode
 }
 export default function Layout({ children }: Props) {
-  const { nav } = useNav()
+  const { nav, closeNav } = useNav()
+  useEffect(() => {
+    closeNav()
+  }, [])
   return (
     <section className="overflow-x-hidden dark:bg-gray-900 ">
       <Header />

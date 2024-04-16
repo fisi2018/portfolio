@@ -8,6 +8,7 @@ export type ProviderValue = {
   nav: StateNav
   toggleNav?: () => void
   changeTheme?: () => void
+  closeNav?: () => void
 }
 export interface ExperienceItem {
   title: string

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logoPortfolio from '../../assets/images/F.png'
+import logoPortfolio from '../../assets/images/logos/MF.png'
 import { useHeader } from '../../hooks/useHeader'
 import BurgerButton from '../common/BurgerButton'
 import Panel from '../common/Panel'

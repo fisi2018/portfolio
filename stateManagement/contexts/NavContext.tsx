@@ -21,6 +21,9 @@ export const NavProvider = ({ children }: Props) => {
   const toggleNav = (): void => {
     dispatch({ type: 'TOGGLE_NAV' })
   }
+  const closeNav = (): void => {
+    dispatch({ type: 'CLOSE_NAV' })
+  }
   const changeTheme: () => void = () => {
     if (localStorage.getItem('theme')) {
       document.documentElement.classList.remove('dark')
@@ -30,7 +33,7 @@ export const NavProvider = ({ children }: Props) => {
       localStorage.setItem('theme', 'dark')
     }
   }
-  const value: ProviderValue = { nav, toggleNav, changeTheme }
+  const value: ProviderValue = { nav, toggleNav, changeTheme, closeNav }
   return <NavContext.Provider value={value}>{children}</NavContext.Provider>
 }
 export const useNav = () => {
