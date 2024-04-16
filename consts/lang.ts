@@ -1,5 +1,5 @@
-import spanishlang from '../assets/images/spanishlang.jpg'
-import englishlang from '../assets/images/englishlang.jpg'
+import spanishlang from '@/public/assets/images/spanishlang.jpg'
+import englishlang from '@/public/assets/images/englishlang.jpg'
 import { Lang } from '../types/stateTypes'
 export const LANG = {
   ES: {

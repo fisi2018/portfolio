@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useLang } from '../../stateManagement/contexts/LangContext'
 import { useNav } from '../../stateManagement/contexts/NavContext'
 import LangButton from './LangButton'
+import { PUBLIC_ROUTES } from '../../routes'
 
 export default function Panel() {
   const { nav, changeTheme } = useNav()
@@ -14,7 +15,7 @@ export default function Panel() {
     >
       <ul className="flex flex-col text-xl xl:text-3xl 2xl:text-4xl">
         <li className="flex">
-          <Link legacyBehavior href="/">
+          <Link legacyBehavior href={PUBLIC_ROUTES.HOME}>
             <a
               className={`p-6 transition-all duration-300  ${pathname.split('/').pop() === '' ? 'text-white' : ' hover:text-gray-300 '}`}
             >
@@ -23,7 +24,7 @@ export default function Panel() {
           </Link>
         </li>
         <li className="flex">
-          <Link legacyBehavior href="/acerca-de">
+          <Link legacyBehavior href={PUBLIC_ROUTES.ABOUT}>
             <a
               className={`p-6 transition-all duration-300  ${pathname.split('/').pop() === 'acerca-de' ? 'text-white' : 'hover:text-gray-300'} `}
             >
@@ -32,7 +33,7 @@ export default function Panel() {
           </Link>
         </li>
         <li className="flex">
-          <Link legacyBehavior href="/proyectos">
+          <Link legacyBehavior href={PUBLIC_ROUTES.PROJECTS}>
             <a
               className={`p-6  transition-all duration-300 ${pathname.split('/').pop() === 'proyectos' ? 'text-white' : 'hover:text-gray-300'}`}
             >
@@ -41,7 +42,7 @@ export default function Panel() {
           </Link>
         </li>
         <li className="flex">
-          <Link legacyBehavior href="/contacto">
+          <Link legacyBehavior href={PUBLIC_ROUTES.CONTACT}>
             <a
               className={`p-6  transition-all duration-300  ${pathname.split('/').pop() === 'contacto' ? 'text-white' : 'hover:text-gray-300'} `}
             >

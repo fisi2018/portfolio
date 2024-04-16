@@ -28,7 +28,7 @@ export default function Contacto() {
                 <span className="flex justify-center mr-2 items-center">
                   <HiOutlineMail />
                 </span>
-                <p>marco.fura@unmsm.edu.pe</p>
+                <p>mjfura27@gmail.com</p>
               </li>
               <li className="flex my-3 ">
                 <span className="flex justify-center mr-2 items-center">
