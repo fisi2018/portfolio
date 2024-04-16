@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logoPortfolio from '../../assets/images/logos/MF.png'
+import logoPortfolio from '@/public/assets/images/logos/MF.png'
 import { useHeader } from '../../hooks/useHeader'
 import BurgerButton from '../common/BurgerButton'
 import Panel from '../common/Panel'
@@ -15,7 +15,7 @@ export default function Header() {
       }
     >
       <Link href={PUBLIC_ROUTES.HOME}>
-        <div className="flex overflow-hidden dark:rounded-full ">
+        <div className="flex overflow-hidden rounded-full border-gray-400 border-2 ">
           <Image width={48} height={48} src={logoPortfolio} alt="" />
         </div>
       </Link>

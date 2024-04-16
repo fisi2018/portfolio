@@ -1,5 +1,5 @@
-import unmsmlogo from '../../assets/images/education/unmsmlogo.png'
-import ucLogo from '../../assets/images/education/logo_uc_front.png'
+import unmsmlogo from '@/public/assets/images/education/unmsmlogo.png'
+import ucLogo from '@/public/assets/images/education/logo_uc_front.png'
 import Image from 'next/image'
 export default function Formacion() {
   return (
