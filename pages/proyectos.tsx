@@ -17,7 +17,7 @@ export default function Proyectos() {
             -Alejandro Taboada-
           </p>
         </section>
-        <section className="grid grid-cols-1 md:grid-cols-3 p-4 z-30 grid-flow-row gap-8 md:gap-6">
+        <section className="grid grid-cols-1 md:grid-cols-3 py-8 px-16 z-30 grid-flow-row gap-8 md:gap-6">
           {DB.map((project) => (
             <ProjectCard
               key={project._id}
