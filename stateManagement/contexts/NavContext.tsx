@@ -7,6 +7,7 @@ import {
 } from 'react'
 import { ProviderValue } from '../../types/stateTypes'
 import { initialNavState, navReducer } from '../reducers/navReducer'
+import { NAV_ACTIONS } from '../actions/navActions'
 
 const NavContext = createContext<ProviderValue>({ nav: { active: false } })
 type Props = {
@@ -19,10 +20,10 @@ export const NavProvider = ({ children }: Props) => {
       document.documentElement.classList.add('dark')
   }, [])
   const toggleNav = (): void => {
-    dispatch({ type: 'TOGGLE_NAV' })
+    dispatch({ type: NAV_ACTIONS.TOGGLE_NAV })
   }
   const closeNav = (): void => {
-    dispatch({ type: 'CLOSE_NAV' })
+    dispatch({ type: NAV_ACTIONS.CLOSE_NAV })
   }
   const changeTheme: () => void = () => {
     if (localStorage.getItem('theme')) {

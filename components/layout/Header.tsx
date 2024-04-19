@@ -16,7 +16,12 @@ export default function Header() {
     >
       <Link href={PUBLIC_ROUTES.HOME}>
         <div className="flex overflow-hidden rounded-full border-gray-400 border-2 ">
-          <Image width={48} height={48} src={logoPortfolio} alt="" />
+          <Image
+            width={48}
+            height={48}
+            src={logoPortfolio}
+            alt="logo portfoloio marco fura"
+          />
         </div>
       </Link>
       <BurgerButton />

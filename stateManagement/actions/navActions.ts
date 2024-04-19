@@ -1,4 +1,4 @@
-export const NAV_ACTIONS: { [index: string]: string } = {
+export const NAV_ACTIONS = {
   TOGGLE_NAV: 'TOGGLE_NAV',
   CLOSE_NAV: 'CLOSE_NAV'
 }

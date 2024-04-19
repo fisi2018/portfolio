@@ -31,7 +31,6 @@ export default function ContactForm({ state }: Props) {
       setLoading(false)
       setForm(initForm)
     } catch (err) {
-      console.log('error submit ', err)
       toast.error('Ha ocurrido un error ')
     }
   }
